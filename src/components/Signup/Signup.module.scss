@@ -1,0 +1,42 @@
+@import "../../styles/variable";
+@import "../../styles/mixin";
+.cointainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    padding: 0rem 6rem;
+    @include respond(phone) {
+      padding: 0rem 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 2rem;
+      input {
+        padding: 1rem;
+        width: 100%;
+        border: none;
+        background-color: $white;
+        &:focus {
+          background-color: $orange;
+        }
+      }
+      .error {
+        color: $orange;
+      }
+      .policy {
+        color: $black;
+      }
+    }
+    span {
+      color: $orange;
+    }
+  }
+}

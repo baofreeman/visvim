@@ -1,0 +1,37 @@
+@import "../../../styles/variable";
+.container {
+  background-color: $black;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  line-height: 30px;
+  .wrapper {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+
+    .marque {
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $black;
+      animation: marque 30s linear infinite;
+      span {
+        color: $white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding-left: 2rem;
+      }
+    }
+  }
+}
+
+@keyframes marque {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixin";
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $white;
+  position: sticky;
+  > nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    height: 60px;
+    gap: 3rem;
+    @include respond(phone) {
+      scroll-behavior: smooth;
+      overflow-x: scroll;
+      gap: 2rem;
+    }
+    > a {
+      span {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $black;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../styles/variable";
+@import "../../styles/mixin";
+.nav_link {
+  > a {
+    padding: 0.6rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    @include respond(phone) {
+      padding: 0.6rem 0.5rem;
+    }
+  }
+}
+.line {
+  content: "";
+  width: fit-content;
+  height: 10px;
+  border-radius: 2px;
+  background-color: black;
+  color: $orange;
+}

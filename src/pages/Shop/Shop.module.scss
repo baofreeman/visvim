@@ -1,0 +1,8 @@
+@import "../../styles/mixin";
+.container {
+  display: flex;
+  flex-direction: row;
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}

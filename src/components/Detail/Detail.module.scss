@@ -1,0 +1,87 @@
+@import "../../styles/variable";
+@import "../../styles/mixin-button";
+@import "../../styles//mixin";
+
+.container {
+  padding: 3rem 0;
+
+  .template {
+    position: relative;
+    .slider {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      .mySwiperSlide {
+        > img {
+          width: 100%;
+        }
+      }
+      .info {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        padding: 2rem;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        gap: 2rem;
+        flex-direction: column;
+        z-index: 100;
+        width: 30%;
+        background-color: $white;
+        @include respond(tab-port) {
+          position: relative;
+          left: 0;
+          transform: translateX(0);
+          width: 100%;
+        }
+        @include respond(phone) {
+          position: relative;
+          left: 0;
+          transform: translateX(0);
+          width: 100%;
+        }
+        > p {
+          width: 100%;
+          height: 200px;
+          scroll-behavior: smooth;
+          overflow: scroll;
+        }
+        .option {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          span {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid $black;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            // &:hover {
+            //   background-color: $orange;
+            // }
+            &:active {
+              background-color: $orange;
+            }
+          }
+        }
+        .btn {
+          @include btn-primary;
+          @include btn-l;
+        }
+      }
+
+      .sliderRigth {
+        > img {
+          width: 200px;
+        }
+      }
+    }
+  }
+}

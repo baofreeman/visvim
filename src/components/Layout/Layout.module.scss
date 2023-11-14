@@ -1,0 +1,8 @@
+@import "../../styles/mixin";
+
+.container {
+  padding: 0rem 6rem;
+  @include respond(phone) {
+    padding: 0rem 2rem;
+  }
+}

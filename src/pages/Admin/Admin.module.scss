@@ -1,0 +1,75 @@
+@import "../../styles/variable";
+@import "../../styles/mixin";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  .sidebar {
+    flex: 0 0 15%;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .items {
+    flex: 0 0 85%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.6rem;
+    .item {
+      width: 100%;
+      table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+        thead {
+          border-top: 2px solid;
+          border-bottom: 2px solid;
+          th {
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #f1f1f1;
+          }
+        }
+        tbody {
+          tr {
+            border-bottom: 1px solid #f1f1f1;
+            td {
+              padding: 10px;
+              border: 1px solid #f1f1f1;
+              img {
+                width: 60px;
+              }
+            }
+            .des {
+              white-space: nowrap;
+              overflow: hidden;
+            }
+            th {
+              padding-left: 10px;
+              border: 1px solid #f1f1f1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .modal {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: $orange;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

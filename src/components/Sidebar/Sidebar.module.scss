@@ -1,0 +1,27 @@
+@import "../../styles/variable";
+@import "../../styles/mixin";
+.container {
+  flex: 0 0 15%;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $orange;
+    gap: 1rem;
+    padding: 2rem 0;
+    @include respond(phone) {
+      flex-direction: row;
+    }
+    a {
+      padding: 0.5rem;
+      span {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        color: $black;
+        font-weight: 700;
+      }
+    }
+  }
+}

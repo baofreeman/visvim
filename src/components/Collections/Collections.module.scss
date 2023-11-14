@@ -1,0 +1,70 @@
+@import "../../styles/variable";
+@import "../../styles//mixin";
+
+.container {
+  flex: 0 0 85%;
+  padding: 3rem 3rem;
+  @include respond(phone) {
+    padding: 1rem 1rem;
+  }
+  .column {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    @include respond(tab-port) {
+      gap: 1rem;
+    }
+    @include respond(phone) {
+      justify-content: center;
+    }
+    .item {
+      flex: 0 0 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      max-width: 200px;
+      overflow: hidden;
+      cursor: pointer;
+      @include respond(tab-port) {
+        max-width: 120px;
+      }
+      @include respond(phone) {
+        flex: 0 0 45%;
+      }
+      .slide {
+        display: flex;
+        overflow: hidden;
+        width: 200px;
+        background: transparent;
+        margin: 0 0;
+        &:hover {
+          -webkit-transform: rotateY(180deg);
+          position: relative;
+        }
+        > img {
+          width: 100%;
+        }
+      }
+      .info {
+        margin-top: 1rem;
+        text-align: center;
+        color: $black;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+        h1,
+        span {
+          font-size: 1.4rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
